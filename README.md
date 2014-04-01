@@ -74,7 +74,23 @@ If you follow the steps below you can get the same result as the uploaded versio
 .comment-form-url {
     display:none;
 }
+.wpfp-span ul {
+	display: table;
+	border-spacing: 20px;
+	border-collapse: 
+}
 
+.wpfp-span ul li {
+	display: table-row;
+}
+
+.wpfp-span ul li a {
+	display: table-cell;
+}
+
+#wpmem_reg {
+	margin: 0 0 15px 30px;
+}
 ```
 
 * Theme Options (for Hueman template): 
@@ -116,9 +132,49 @@ Here set up your SMTP server parameters.
 
 
 ## Programmer documentation ##
-### External plugin modifications and extensions ###
-### Exhibition Printer plugin ###
+### Modification of WP Favorite Post plugin ###
+With the modification of this plugin we aimed to extend the original plugin with some functionality, make cooperation with the WP-Members plugin in order to support our use-cases. Two use-case are related with the modified version of the WP Favorite Post plugins:
+
+1. Once a user registers to the site, in the e-mail the list of favorites should be also included.
+ 
+2. Once a user logs in the plugin should detect it and persist the cookies in the database assigning to our user.
+ 
+Let's see how we extended the original plugin:
+##### Persist at login #####
+We created a new function in the end of the wp_favorite-posts.php file. The action is called `exhib_persist_cookies()` and it is called if the `wp hook` is called. In the `exhib_persist_cookies()` we check if the user logged and there are favorites stored in cookies by calling the original plugins `wpfp_get_cookie()` method. 
+If these conditions hold then we iterate through all of the cookies and do two things:
+1. Check if it is already in the database by calling `wpfp_check_favorited($post_id)`. If not then we immediately add it by calling `wpfp_add_to_usermeta($post_id)`.
+2. Delete the cookie by calling `wpfp_set_cookie()`
+
+##### Include favorites in registration mail #####
+We created a new function `add_favorite_posts_to_reg_mail($email_content)` which subscribe on the `wpmem_email_newreg` hook. There for it is called by the WP-Members plugin just before a registration mail is sent. The idea is to create a list of links and show the post titles, which we can generate based on iterating over all of the cookies returned by `wpfp_get_cookie()` and attach the link for each favorite post to the `$favorite_links` variable. 
+After that we can inject it in the e-mail content, so we introduced a wildcard shortcut `[**wp-favorite-posts**]`, which can be used in the WP-Members admin panel and replaced with the content of the `$favorite_links` variable.
+
 ### Modification of themes ###
+These modifications aimed to achieve two basic goals regarding the layout:
+#### Add new toggle buttons to the header ####
+For supporting not only native app, but also a responsive, fully usable web view we wanted to add two more toggable region to the header: A region for JavaScript based QR-code scanning and a region for login/logout. Therefor we had to modify the following files:
+
+ - header.php: In the `container-inner` div we introduced a `login` and a `toggle-qr` div to show the toggle button and the `login-expand` and `scanner` as their toggable region.
+ 
+ - scripts.js: We added the functionality to div buttons above to be toggable. When a button is toggled it toggles out all the others.
+ 
+ - style.css: We created the stlying and positioning rules for our new divs. Also we extended the IE (8) fixes to be available for our newly introduced divs.
+ 
+ - responsive.css: We introduced stlying rules how the buttons should look like and positiond in the smaller, typically mobile, displays.
+
+#### Modify the post layout to contain "favorite button" ####
+To achieve this requirement and also to get the desired style of the page we modified the `single.php` file according the following steps.
+
+ - To avoid showing the page title we commented out the following command: `get_template_part('inc/page-title')`
+ 
+ - To avoid showing the author line we commented out the whole tag of `<p class="post-byline">`
+ 
+ - To show the favorite button we introduced a new span block in the `post-inner group` class, which calls `wpfp_link()` method to render the button.
+
+### Exhibition Printer plugin ###
+
+
 
 
 ----------
