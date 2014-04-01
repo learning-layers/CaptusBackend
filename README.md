@@ -90,7 +90,7 @@ If you follow the steps below you can get the same result as the uploaded versio
 * General tab: Fill up the titles and taglines. 
 * Reading tab: Front page display – set this accordingly your needs, however it is advised to create a welcome page and set statically to that. Full text shown.
 * Discussion tab:  
-//TODO IMAGE
+![discussion_settings](https://cloud.githubusercontent.com/assets/7116322/2579016/bd09dcd6-b99b-11e3-93f7-7f64c7dae533.png)
 
 #### 3. WP Favorite Posts ####
 *   **Only registered users can favorite: NO**
@@ -106,11 +106,11 @@ If you follow the steps below you can get the same result as the uploaded versio
 Here set up your SMTP server parameters.
 #### 5. WP-Members ####
 ##### WP-Members Options tab #####
-//TODO IMAGE
+![wp_members_options](https://cloud.githubusercontent.com/assets/7116322/2579019/bd28b156-b99b-11e3-8c00-67e1c6db426f.png)
 ##### Fields tab #####
-//TODO IMAGE
+![wp_members_fields](https://cloud.githubusercontent.com/assets/7116322/2579018/bd282e66-b99b-11e3-91e4-8bbbce094ecf.png)
 ##### Emails tab #####
-//TODO IMAGE
+![wp_members_emails](https://cloud.githubusercontent.com/assets/7116322/2579017/bd2708c4-b99b-11e3-9f22-454295367605.png)
 
 ----------
 
