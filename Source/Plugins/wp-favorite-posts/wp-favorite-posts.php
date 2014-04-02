@@ -472,15 +472,13 @@ function exhib_persist_cookies(){
                 //Check if there was any cookie
     		if (wpfp_get_cookie()):
         		foreach (wpfp_get_cookie() as $post_id => $val) {
-        		    	error_log("COOKIE FOR: ".$post_id);
         		        //If favorite post is not in DB add to it
-                                if(!wpfp_check_favorited($post_id))
-                                {
-					error_log("USER DOES NOT HAVE THE POST: ".$post_id);
-                                        wpfp_add_to_usermeta($post_id);
-                                }
-                                //Delete that post from the cookie
-                                wpfp_set_cookie($post_id,"");
+                        if(!wpfp_check_favorited($post_id))
+                        {
+                            wpfp_add_to_usermeta($post_id);
+                        }
+                        //Delete that post from the cookie
+                        wpfp_set_cookie($post_id,"");
         		}
     		endif;
         }
