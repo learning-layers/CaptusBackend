@@ -36,15 +36,15 @@ Websites of the plugin for more information or manual installation: http://wordp
 ##### Exhibition Printer #####
 This plugin makes possible for printing favorite pages using Google Cloud Printing service. It also attaches a cover and a table of content page to the favorite pages.
 For more information and downloading the plugin use the following website:
-[Exhibition Printer readme](Source/Plugins/exhibition_printer/README.md)
+[Exhibition Printer readme](Source/Plugins/exhibition_printer_README.md)
 
 ##### WP Favorite Posts (Version 1.6.1) #####
 This plugin makes possible to put posts on a favorite list assigned to the user. We will extend this plugin with some functionality later, so no guarantee our modifications will work with the later versions.
-[Modified WP Favorite Posts readme](Source/Plugins/wp-favorite-posts/README.md)
+[Modified WP Favorite Posts readme](Source/Plugins/wp-favorite-posts_README.md)
 
 ### Theme ###
 The theme is based on the [Hueman][3] responsive theme with slight modifications for enabling some functionality. The modifications are described in the Modification of themes section. To download and install the theme navigate to the website:
-[Modified Hueman theme readme](Source/Themes/hueman/README.md)
+[Modified Hueman theme readme](Source/Themes/hueman_README.md)
 
 
 ### Other files to deploy ###
