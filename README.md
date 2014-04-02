@@ -5,7 +5,6 @@ The backend of Captus consisting of a number of WordPress plugins.
 
 ----------
 
-
 ## Installation ##
 ### Prerequisites ###
 In order to install the exhibition application you will need a LAMP environment and a normal WordPress 3.8.1 site deployed on that server. To set up the environment and WordPress 3.8.1 we suggest to use the following tutorials, it is proved to work in 31.03.2014.
@@ -17,7 +16,7 @@ In order to install the exhibition application you will need a LAMP environment 
 To install the plugins listed in this section just use the Plugins>Add new menu from the admin panel and search for WP-Members, install and activate it. Alternatively you can install it by unzipping the downloaded plugin from the given plugin site.
 ##### WP-Members (Version 2.9.1) #####
 Plugin to handle and customize user management. We use it to make possible custom registration and login forms, to enable registration using only e-mail, customized registration mail sending and everything which deals with user management.
-Websites of the plugin for more information or manual installation: https://wordpress.org/plugins/wp-members/ or http://rocketgeek.com/plugins/wp-members/
+Websites of the plugin for more information or a manual installation: https://wordpress.org/plugins/wp-members/ or http://rocketgeek.com/plugins/wp-members/
 
 ##### Fotorama (Version 4.4.9) #####
 This plugin is used for creating responsive, mobile navigable galleries, which can be used in posts and pages.
