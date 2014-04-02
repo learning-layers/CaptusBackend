@@ -207,12 +207,45 @@ The file [wp-members-pluggable.php](Source/Files/wp-members-pluggable.php) conta
 
 
 ## System administrator documentation ##
+This section of the documentation is written for those people who has to manage the content, customize it to the current needs and generally has a basic knowledge about how to use, manage the Wordpress CMS.
+### Posts - Exhibition items ###
+The idea behind using Wordpress is to provide an easy way to manage a content of an exhibiton by reusing the general concept of the Wordpress ecosystem. One of these concept pairing is the reuse of posts: In our application the information we want to provide about an exhibition item is recorded in a post. That means that if we create a post it will be (at default settings) immediately "likeable", commentable and they can be organized in categories based on different aspects of the exhibition items.
 
+All in all: Create a post if you want to provide information about an exhibiton item, assign it to categories and publish.
+### Pages - Static pages ###
+Pages are the static content of an exhibition: This means those parts which the visitors typically just read, but no interaction is needed. For example a Welcome page or a page for describing the history of the exhibition should be created in the system as a page.
 
-----------
+There are an other set of pages, which provides functionality for the user by holding shortcuts and absolutely **adviced to create** them: **Favorite page, Login page**
 
+### Usable shortcuts ###
+These shortcuts can be used in any post and page, just simply insert somewhere in the content the shortcut form: [something]
+#### [wp-favorite-posts] ####
+This shortcut will render a list of the users favorite posts. It also renders delete button for each favorite post and shows it in a table like format.
 
-## User documentation ##
+**Advised to use it in a Favorite page**
+#### [ex_print_button] ####
+Renders a button for printing via the Google Cloud Service a customized printout containing a cover and table of contents page and the users favorite posts.
+
+**It is also advised to put this shortcut on a Favorite page**, because therefor the user can see in advance what will be printed.
+#### [wp-members page="register"] ####
+Renders a WP-Members register form, which (by default) contains only an e-mail input box and a register button.
+#### [wp-members page="login"] ####
+Renders a WP-Members login form, which (by default) contains an username and a password field as well as a login button.
+### Header menu ###
+At the Appearance > Menus you can create a menus, which will be shown in the top header. You can insert here your static pages, your categories in a multi-level menu.
+It is suggested to keep the number of menu elements lower, this is making the navigation in mobile devices more comfortable.
+### Emails customization ###
+In the Settings>WP-Members>Emails tab you can edit the content of the mails sent by WP-Members as a response of different user actions like registration or password reset.
+
+In the registration letter you can use a special shortcode: **[\**wp-favorite-posts\**]**
+This will render you a list of the registered user favorite post and their links in the place, where you used the shortcode.
+### Printing customization ###
+If you use [ex_print_button] shortcut, you can print the users favorites with a cover page and a table of contents page.
+Therefor it is desirable to customize them. To achieve this you need to know some HTML/PHP, but it is not that hard.
+You can edit them in the Plugins>Editor>Select Exhibition Printer> Select cover.php or tableofcontents.php.
+In cover.php a `name` parameter in the `GET` list will be passed containing the user name. Morover in the tableofcontents.php the list of the content will be passed in a semicolon separated list under the `content GET` parameter
+
+Modify and customize your page to meet your needs.
 
 
   [1]: https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu "LAMP installation + CURL for PHP"
