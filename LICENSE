@@ -1,0 +1,19 @@
+The files in this repository are belonging to different licence rules:
+/Source/Files/ : 
+wp-members-pluggable.php - Apache v2
+
+/Source/Plugins/ :
+
+	/exhibition_printer :
+
+	exhibition_printer plugin - Apache v2 except GoogleCloudPrint.php
+	GoogleCloudPrint.php - GNU GPL v3
+
+	/wp-favorite-posts :
+	wp-favorite posts plugin - GNU GPL v3
+
+/Source/Themes/ :
+
+/hueman :
+
+hueman theme - GNU GPL v3
