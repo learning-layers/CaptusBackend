@@ -172,7 +172,7 @@ To achieve this requirement and also to get the desired style of the page we mod
  - To show the favorite button we introduced a new span block in the `post-inner group` class, which calls `wpfp_link()` method to render the button.
 
 ### Exhibition Printer plugin ###
-This plugin is designed to make possible to create a printout of the user favorite posts and print it using the Google Cloud service. The printout contains a customizable cover page, a customizable table of contents page and following these the pages of the posts on the users favorite list. 
+This plugin is designed to make it possible to create a printout of the user favorite posts and print it using the Google Cloud service. The printout contains a customizable cover page, a customizable table of contents page and following these the pages of the posts on the users favorite list. 
 
 In a post or page a print button can be rendered by using the `[ex_print_button]` shortcode, which calls the function of `sButton`, which will render the HTML code of the button.
 
