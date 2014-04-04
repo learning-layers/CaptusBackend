@@ -24,6 +24,7 @@ To achieve this requirement and also to get the desired style of the page we mod
  - To avoid showing the author line we commented out the whole tag of `<p class="post-byline">`
  
  - To show the favorite button we introduced a new span block in the `post-inner group` class, which calls `wpfp_link()` method to render the button.
+
 ## Installation ##
 ### Wordpress themes manager ###
 
@@ -38,6 +39,8 @@ To achieve this requirement and also to get the desired style of the page we mod
  - **Extract** it on your webserver to the folder **`/wp-content/themes/`**
  - Go on the admin side of the Wordpress, you should see the plugin in the plugin list. **Activate** it.
 
+## License ##
+According to the original project, the modified version of Hueman template is also under GNU GPL v3 license. Further information can be read in the hueman [subfolder](./hueman/license.txt).
 
   [1]: http://alxmedia.se/
   [2]: https://wordpress.org/themes/hueman

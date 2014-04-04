@@ -36,6 +36,8 @@ After that we can inject it in the e-mail content, so we introduced a wildcard s
  - **Extract** it on your webserver to the folder **`/wp-content/plugins/`**
  - Go on the admin side of the Wordpress, you should see the plugin in the plugin list. **Activate** it.
 
+## License ##
+According to the original project, the modified version of the WP favorite posts plugin is also under GNU GPL v3 license. Further information can be read in the [license file](./license.txt).
 
   [1]: http://nxsn.com/
   [2]: https://wordpress.org/plugins/wp-favorite-posts/

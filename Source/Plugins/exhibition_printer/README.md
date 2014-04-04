@@ -30,4 +30,7 @@ Table of contents page is also a standard HTML/PHP page, which also can be custo
  - **Extract** it on your webserver to the folder **`/wp-content/plugins/`**
  - Go on the admin side of the Wordpress, you should see the plugin in the plugin list. **Activate** it.
 
-  [1]: ./exhibition_printer.zip
+## License ##
+This project, excepth GoogleCloudPrint.php is under Apache v2 license. The GoogleCloudPrint is according to the original regulation under GNU GPL v3. Further information about the Apache v2 checl the [LICENSE file](./LICENSE).
+
+  [1]: ../exhibition_printer.zip

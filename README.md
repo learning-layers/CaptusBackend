@@ -35,15 +35,15 @@ Websites of the plugin for more information or manual installation: http://wordp
 ##### Exhibition Printer #####
 This plugin makes possible for printing favorite pages using Google Cloud Printing service. It also attaches a cover and a table of content page to the favorite pages.
 For more information and downloading the plugin use the following website:
-[Exhibition Printer readme](Source/Plugins/exhibition_printer_README.md)
+[Exhibition Printer readme](Source/Plugins/exhibition_printer/README.md)
 
 ##### WP Favorite Posts (Version 1.6.1) #####
 This plugin makes possible to put posts on a favorite list assigned to the user. We will extend this plugin with some functionality later, so no guarantee our modifications will work with the later versions.
-[Modified WP Favorite Posts readme](Source/Plugins/wp-favorite-posts_README.md)
+[Modified WP Favorite Posts readme](Source/Plugins/wp-favorite-posts/README.md)
 
 ### Theme ###
 The theme is based on the [Hueman][3] responsive theme with slight modifications for enabling some functionality. The modifications are described in the Modification of themes section. To download and install the theme navigate to the website:
-[Modified Hueman theme readme](Source/Themes/hueman_README.md)
+[Modified Hueman theme readme](Source/Themes/README.md)
 
 
 ### Other files to deploy ###
@@ -246,6 +246,8 @@ In cover.php a `name` parameter in the `GET` list will be passed containing the 
 
 Modify and customize your page to meet your needs.
 
+## LICENSE ##
+For the license of the different components check the LICENSE file in the root of the repository.
 
   [1]: https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu "LAMP installation + CURL for PHP"
   [2]: https://www.digitalocean.com/community/articles/how-to-install-wordpress-on-ubuntu-12-04
